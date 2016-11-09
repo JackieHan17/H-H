@@ -1,0 +1,130 @@
+/* General styles */
+
+.nav {
+	position: relative;
+	width: 8em;
+	margin:0;
+}
+
+.nav__item {
+	line-height: 1;
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
+	letter-spacing: 0;
+	color: currentColor;
+	border: 0;
+	background: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.nav__item:focus {
+	outline: none;
+}
+
+/* Individual styles */
+
+/*** Timiro ***/
+.nav--timiro{
+	margin: 0;
+}
+.nav--timiro .nav__item {
+	overflow: hidden;
+	width: 1.5em;
+	height: 1.5em;
+	margin: 0.5em 0em 0em 0em ;
+	border-radius: 50%;
+	background: #656565;
+	-webkit-transform: scale3d(0.5,0.5,1);
+	transform: scale3d(0.5,0.5,1);
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+	-webkit-transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+	transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+}
+
+.nav--timiro .nav__item--current,
+.nav--timiro .nav__item:not(.nav__item--current):hover {
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+}
+
+
+
+.nav--timiro .nav__item--current::before {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+svg {
+	pointer-events: none;
+}
+
+/* Demo 1 */
+
+.demo-drawings figcaption {
+	margin: 0 auto 0 auto;
+	max-width: 40em;
+	width: 95%;
+	text-align: center;
+}
+
+.demo-drawings figure:first-child figcaption {
+	margin-top: 8em;
+}
+
+.demo-drawings figcaption h2 {
+	font-weight: 300;
+	font-size: 3em;
+	margin-bottom: 0.2em;
+}
+
+.demo-drawings figcaption p {
+	font-size: 1.3em;
+}
+
+.drawings {
+	position: relative;
+	max-height: 960px;
+}
+
+.illustration {
+	position: absolute;
+	opacity: 0;
+	top: 50%;
+	left:640px;
+	max-height: 100%;
+	max-width: 100%;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.showsvg{
+	opacity: 1;
+}
+
+.hidesvg {
+	opacity: 0;
+}
+.line-drawing,.illustration {
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.line-drawing path {
+	fill: none;
+	stroke:black;
+	stroke-width: 1;
+}
+
+path.line-round {
+	stroke-linecap: round;
+}
+
+path.stroke-medium {
+	stroke-width: 2;
+}
+
+path.stroke-thin {
+	stroke-width: 1;
+}
