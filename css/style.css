@@ -307,9 +307,11 @@ height: 70vh;
 	}
 	.hung{
 		padding-right: 40%;
+		margin-top: 5%;
 	}
 	.hung2{
 		margin-left:40%;
+		margin-top: 5%;
 	}
 
 	.han2,.hung2 p {
@@ -323,7 +325,7 @@ height: 70vh;
 		content: attr(id);
 		position: absolute;
 		top: 1em;
-		right: 0.5em;
+		left:10%;
 	}
 	.nav {
 		-webkit-flex: none;
@@ -381,7 +383,7 @@ height: 70vh;
 		content: attr(id);
 		position: absolute;
 		top: 1em;
-		right: 0.5em;
+		left:0.5%;
 	}
 	.nav {
 		-webkit-flex: none;
